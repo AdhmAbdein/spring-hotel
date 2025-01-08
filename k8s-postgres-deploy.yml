@@ -17,15 +17,15 @@ spec:
     spec:
       containers:
         - name: cont-postgres
-          image: postgre:17
+          image: postgres:17
           ports:
             - containerPort: 5432
           env:
             - name: POSTGRES_USER
               value: "postgres"
-            - name: POSTGRES_PASWORD
+            - name: POSTGRES_PASSWORD
               valueFrom:
-                secretKetRef:
+                secretKeyRef:
                   name: postgres-hotel-secret 
                   key: POSTGRES_PASSWORD
             - name: POSTGRES_DB
@@ -36,6 +36,6 @@ spec:
       volumes:
         - name: hotel-vol
           persistentVolumeClaim:
-            ClaimName: postgres-hotel-pvc
+            claimName: postgres-hotel-pvc
                   
 
