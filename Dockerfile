@@ -3,7 +3,7 @@ FROM maven:3.8.4-openjdk-17-slim
 WORKDIR /app
 
 COPY mvnw .
-COPY .mvn .mvn
+#COPY .mvn .mvn
 COPY pom.xml .
 COPY src ./src
 
