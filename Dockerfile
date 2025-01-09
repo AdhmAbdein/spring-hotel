@@ -12,5 +12,5 @@ RUN ls -l target/
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "target/HOTEL-SpringBoot-project-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
 
